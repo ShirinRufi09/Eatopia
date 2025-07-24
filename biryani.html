@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biryani</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #ffebcd;
+        }
+        nav {
+            width: 100%;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            top: 0%;
+            background-color: #987654;
+            color: #8b4513;
+        }
+        nav ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+        }
+        li a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #8b4513;
+            margin-inline: 1.5rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+        }
+        .main {
+            display: flex;
+            gap: 45px;
+            justify-content: center;
+            margin-top: 156px;
+        }
+        .main img {
+            width: 600px;
+        }
+        .mainText {
+            margin-top: 33px;
+            color: #8b4513;
+        }
+        .mainText h1 {
+            font-size: 30px;
+        }
+        .mainText p {
+            margin-top: 1.5rem;
+            color: #8b4513;
+        }
+        .mainText button {
+            width: 140px;
+            height: 38px;
+            background-color: rgb(244, 126, 84);
+            color: #8b4513;
+            border: none;
+            margin-top: 1.5rem;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .head {
+            background-color: #8b4513;
+            height: 10px;
+            width: 20px;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            font-size: medium;
+        }
+        .foods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 56px;
+            justify-content: center;
+        }
+        .foods img {
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+        }
+        .card {
+            width: 300px;
+            background-color: #fff;
+            padding: 12px;
+            cursor: pointer;
+        }
+        .card p {
+            padding: 12px;
+        }
+        .card button {
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            background-color: rgb(244, 126, 84);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            justify-content: center;
+        }
+        .head {
+            text-align: center;
+            color: #fff;
+            padding: 88px;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 4px solid #8b4513;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #8b4513;
+            color: #fff;
+            flex-wrap: wrap;
+            padding: 66px;
+            margin-top: 66px;
+        }
+        .footer .text p {
+            margin-top: 12px;
+        }
+        .cardDetail {
+            width: 600px;
+            position: fixed;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, 40%);
+            padding: 22px;
+            background-color: #fff;
+            text-align: center;
+            top: 4%;
+            color: black;
+        }
+        .cardDetail img {
+            width: 300px;
+        }
+        .cardDetail i {
+            position: absolute;
+            background-color: #8b4513;
+            color: #fff;
+            left: 0px;
+            top: -1px;
+            padding: 8px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        #bar {
+            display: none;
+            font-size: 27px;
+        }
+        @media screen and (max-width: 1100px) {
+            .main {
+                display: block;
+                text-align: center;
+            }
+            .main img {
+                margin-top: 1.5rem;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            ul li {
+                display: none;
+            }
+            #bar {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .main img {
+                width: 90%;
+                border-radius: 1.5rem;
+            }
+            .cardDetail {
+                width: 80%;
+            }
+            .cardDetail img {
+                width: 200px;
+            }
+        }
+        @media screen and (max-width: 930px) {
+            .trendFood {
+                width: 90%;
+            }
+            .trends img {
+                width: 160px;
+                height: 200px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .main h1 {
+                font-size: 34px;
+            }
+            .mainText {
+                padding: 6px;
+            }
+            .trendFood {
+                width: 90%;
+            }
+            .trendFood .trends {
+                display: flex;
+                gap: 12px;
+            }
+            .trends img {
+                width: 22%;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">FreshMenu</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="bar">&#9776;</div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="main">
+        <div class="mainText">
+            <h1>Aromatic, delicious, and downright irresistible! 👑🍛</h1>
+        </div>
+    </div>
+
+    <!-- Fast Food Section -->
+    <div id="fastFood">
+        <div class="head">
+            <h1>Biryani</h1>
+        </div>
+        <div class="foods">
+            <div class="card">
+                <img src="http://www.archanaskitchen.com/images/archanaskitchen/1-Author/Shaheen_Ali/CHETTINAD_STYLE_PRAWN_BIRYANI.jpg" alt="Prawn Biryani">
+                <p>Prawn Biryani</p>
+                <button class="cart" onclick="addToCart('Classic Beef Burger')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://revi.b-cdn.net/wp-content/uploads/2017/01/paneer-biryani-1.jpg" alt="Paneer Biryani">
+                <p>Paneer Biryani</p>
+                <button class="cart" onclick="addToCart('Veg Burger')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://d1mxd7n691o8sz.cloudfront.net/static/recipe/recipe/2023-03/Mutton-Biryani-Recipe-aa610f14761f45daaf16cc28861e7227_thumbnail_167947671.jpg" alt="Mutton Biryani">
+                <p>Mutton Biryani</p>
+                <button class="cart" onclick="addToCart('Mutton biryani')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://www.vegrecipesofindia.com/wp-content/uploads/2021/06/soya-biryani.jpg" alt="Soya biryani">
+                <p>Soya biryani</p>
+                <button class="cart" onclick="addToCart('Soya biryani')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="http://www.vegrecipesofindia.com/wp-content/uploads/2013/06/kashmiri-biryani-recipe36.jpg" alt="Kashmiri Biryani">
+                <p>Kashmiri Biryani</p>
+                <button class="cart" onclick="addToCart('Kashmiri Biryani')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://cdn.siasat.com/wp-content/uploads/2020/02/Biryani-1.jpg" alt="Hyderabadi Biryani">
+                <p>Hyderabadi Biryani</p>
+                <button class="cart" onclick="addToCart('Hyderabadi Biryani')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://2.bp.blogspot.com/-_F1e8VQ4NGQ/WYd9bCulaCI/AAAAAAAAI1s/yiuq6RDKcU49VT32jnwUPfEgEHPV3uRNQCLcBGAs/s1600/13418573_633048053511891_6691348347281229875_o.jpg" alt="Tandoori Biryani ">
+                <p>Tandoori Biryani </p>
+                <button class="cart" onclick="addToCart('Tandoori Biryani ')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://www.licious.in/blog/wp-content/uploads/2019/11/Mutton-Biryani-1-1024x1024.jpg" alt="Mughlai Biryani">
+                <p>Mughlai Biryani</p>
+                <button class="cart" onclick="addToCart('Mughlai Biryani')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://img.freepik.com/premium-photo/iranian-biryani-recipe-with-beef-kebabs-sun_961875-166514.jpg" alt="Iranian Biryani">
+                <p>Iranian Biryani</p>
+                <button class="cart" onclick="addToCart('Iranian Biryani')">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="text">
+            <p>&copy; 2025 FreshMenu. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            alert(item + ' has been added to your cart!');
+        }
+    </script>
+
+</body>
+</html>

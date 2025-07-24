@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshMenu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1>Eatopia</h1>
+            </div>
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="#food">Foods</a></li>
+                <li><a href="#trend">Trends</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="cart.html" id="cartLink">🛒Cart</a></li>
+                <li><a href="#" id="paymentButton">💳 Payment</a></li>
+                <i id="bar" class="fa-solid fa-bars"></i>
+            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="mainText">
+                <h1>Eatopia</h1>
+                <p>The Court of Fine Dining </p>
+            </div>
+            <img src="https://blog.bridals.pk/wp-content/uploads/2019/02/banner-mithai-min.jpg" alt="sweets">
+        </div>
+
+        <div id="sweets">
+            <div class="head">
+                <h1>Taste Menu</h1>
+            </div>
+            <div class="foods">
+                <div class="card">
+                    <img src="https://buddymantra.com/wp-content/uploads/2016/10/sweets.jpg" alt="Sweets">
+                    <p>Sweets</p>
+                    <button class="cart" onclick="selectItem('Sweets', 'sweets.html')">Select</button>
+                </div>
+                <div class="card">
+                    <img src="https://wallpaperaccess.com/full/1306125.jpg" alt="Fast Food Classics">
+                    <p>Fast Food Classics</p>
+                    <button class="cart" onclick="selectItem('Fast Food Classics', 'fastfood.html')">Select</button>
+                </div>
+                <div class="card">
+                    <img src="https://foodess.com/wp-content/uploads/2023/02/Butter-Naan-2.jpg" alt="Indian Bread">
+                    <p>Indian Bread</p>
+                    <button class="cart" onclick="selectItem('Indian Bread', 'Breads.html')">Select</button>
+                </div>
+                <div class="card">
+                    <img src="https://wallpaper.dog/large/10711707.jpg" alt="Beverages">
+                    <p>Beverages</p>
+                    <button class="cart" onclick="selectItem('Beverages', 'Beverage.html')">Select</button>
+                </div>
+                <div class="card">
+                    <img src="https://sifu.unileversolutions.com/image/en-LK/recipe-topvisual/2/1260-709/authentic-chicken-biryani-50434132.jpg" alt="Biryani">
+                    <p>Biryani</p>
+                    <button class="cart" onclick="selectItem('Biryani', 'biryani.html')">Select</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="trend">
+            <div class="head">
+                <h1>Trending Foods</h1>
+            </div>
+            <div class="trend-container">
+                <div class="trend-item">
+                    <img src="https://images7.alphacoders.com/350/350913.jpg" alt="Pizza">
+                </div>
+                <div class="trend-item">
+                    <img src="https://wallpaperaccess.com/full/6905828.jpg" alt="Spring Roll">
+                </div>
+                <div class="trend-item">
+                    <img src="https://sifu.unileversolutions.com/image/en-LK/recipe-topvisual/2/1260-709/authentic-chicken-biryani-50434132.jpg" alt="Biryani">
+                </div>
+            </div>
+        </div>
+        <div id="blog">
+            <div class="head">
+                <h1>Read Food Blogs</h1>
+            </div>
+            <div class="blogs">
+                <div class="blogCard">
+                    <img src="https://www.yummytummyaarthi.com/wp-content/uploads/2022/02/unnamed.jpeg" alt="Aarthi Satheesh">
+                    <p>Aarthi Satheesh</p>
+                    <a href="https://www.yummytummyaarthi.com/">Read Blog</a>
+                </div>
+                <div class="blogCard">
+                    <img src="https://natashaskitchen.com/wp-content/uploads/2024/05/NK_Lifestyle_82022-9557-scaled.jpg" alt="Natasha">
+                    <p>Natasha’s Kitchen Cookbook</p>
+                    <a href="https://natashaskitchen.com/">Read Blog</a>
+                </div>
+                <div class="blogCard">
+                    <img src="http://s3.india.com/wp-content/uploads/2017/01/chef-sanjeev-kapoor.jpg" alt="sanjeevkapoor">
+                    <p>Sanjeev kapoor </p>
+                    <a href="https://www.sanjeevkapoor.com/">Read Blog</a>
+                </div>
+            </div>
+        </div>
+        <style>
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8b4513;
+    color: #f5f5f5;
+    flex-wrap: wrap;
+    padding: 60px;
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.8;
+}
+
+.footer .text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffd700;
+    border-bottom: 1px solid #ffd700;
+    padding-bottom: 6px;
+    width: fit-content;
+}
+
+.footer .text p {
+    margin: 6px 0;
+    color: #ddd;
+}
+
+.footer a {
+    color: #f0e68c;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+</style>
+
+<div class="footer">
+    <div class="text">
+        <h3>About Us</h3>
+        <p>Our mission is to revolutionize <br> the way people discover, order, and
+            enjoy food.</p>
+        <p>Experience curated dining with elegance and <br> ease at Le Cour.</p>
+    </div>
+
+    
+    <div class="text">
+        <h3>Our Food</h3>
+        <p>Quality Ingredients</p>
+        <p>Chef-Crafted Menus</p>
+        <p>Affordable Luxury</p>
+    </div>
+    <div class="text">
+        <h3>Exclusive Offers</h3>
+        <p>20% OFF on First Order</p>
+        <p>Unlock Member Rewards</p>
+    </div>
+    <div class="text">
+    <h3>Connect With Us</h3>
+    <p><a href="#">LinkedIn</a></p>
+    <p><a href="#">Facebook</a></p>
+    <p><a href="#">Instagram</a></p>
+    <p><a href="mailto:support@lecour.app">support@lecour.app</a></p>
+    <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+    <p>123, Main Street, Connaught Place, <br> New Delhi – 110001</p>
+</div>
+
+
+
+    <script>
+        function selectItem(item, url) {
+            alert(item + " selected! Redirecting to " + item + " page...");
+            window.location.href = url;
+        }
+    
+        document.getElementById("paymentButton").addEventListener("click", function() {
+            alert("Proceeding to Payment...");
+            window.location.href = "payment.html";
+        });
+    </script>
+</body>
+</html>

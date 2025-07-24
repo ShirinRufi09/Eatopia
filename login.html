@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Gallery Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: right;
+            background: url("https://images.pexels.com/photos/1660030/pexels-photo-1660030.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") no-repeat center center/cover;
+            color: #8b4513  ;
+        }
+        .login-container {
+            width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: 5px solid #5e3a1b;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #8b4513 ;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+        .about-container {
+            width: 320px;
+            margin: 20px auto;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            border: 5px solid #5e3a1b;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            color: #000;
+        }
+        .about-container h3 {
+            color: #5e3a1b;
+        }
+        .about-container p {
+            color: #5e3a1b;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .about-container a {
+            color: #5e3a1b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .about-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍕 Craving something delicious? </h1>
+    <h2>We've got you covered!</h2>
+    <div class="login-container">
+        <h2>Welcome to Eatopia — Where every visit begins with your name, and ends with a masterpiece</h2>
+        <input type="text" id="username" placeholder="Enter Your Name 🍔">
+        <input type="password" id="password" placeholder="Secret Food Code 🔒">
+        <button onclick="checkLogin()">Enter the Feast 🎉</button>
+    </div>
+
+
+    <script>
+        function checkLogin() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            
+            if (username === "rufi" && password === "1234") {
+                alert("Welcome to Eatopia, " + username + "!");
+                window.location.href = "index.html";
+            } else {
+                alert("Oops! 🍔 Incorrect Secret Code. Try again!");
+            }
+        }
+    </script>
+</body>
+</html>

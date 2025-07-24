@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Payment Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ccc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .payment-container {
+      background: #ff5722;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header {
+      text-align: left;
+      margin-bottom: 15px;
+    }
+
+    .savings {
+      color: green;
+      font-weight: bold;
+    }
+
+    .delivery-info p {
+      font-size: 14px;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .offer-banner {
+      background: #d4f4d2;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+      color: #228B22;
+      margin: 15px 0;
+    }
+
+    .payment-section h3 {
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    .payment-method {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 8px 0;
+      border: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    .payment-method input {
+      margin-right: 10px;
+    }
+
+    .new-tag {
+      background: red;
+      color: white;
+      font-size: 12px;
+      padding: 2px 5px;
+      border-radius: 3px;
+      margin-left: 5px;
+    }
+
+    .add-upi, .add-card {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .add-upi button, .add-card button {
+      background: white;
+      border: none;
+      color: black;
+      padding: 10px;
+      width: 100%;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #aaa;
+    }
+
+    .order-timer {
+      background:white;
+      color: black;
+      padding: 10px;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      border-radius: 5px;
+    }
+
+    .more-payment-options {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+    }
+
+    .payment-option:last-child {
+      border-bottom: none;
+    }
+
+    .payment-option img {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .payment-option p {
+      margin: 0;
+      font-size: 14px;
+      color: #777;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .proceed-pay {
+      margin-top: 20px;
+      background-color: #28a745;
+      color: #fff;
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .success-msg {
+      text-align: center;
+      background: #fff;
+      color: green;
+      margin-top: 15px;
+      font-weight: bold;
+      padding: 10px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="payment-container">
+    <header>
+      <h2>Payment Options</h2>
+      <p>1 item • Total: ₹279 • <span class="savings">Savings of ₹31</span></p>
+    </header>
+
+    <div class="delivery-info">
+      <p><strong>Burger King</strong> | Delivery in: 25-30 mins</p>
+      <p>Work | Badaraghunathpur, Odisha 752054, India</p>
+    </div>
+
+    <div class="offer-banner">
+      <p>Save up to ₹56 more with payment offers</p>
+    </div>
+
+    <div class="payment-section">
+      <h3>💳 Pay by any UPI App</h3>
+
+      <div class="payment-method">
+        <input type="radio" name="payment" id="swiggy-upi" value="Swiggy UPI" />
+        <label for="swiggy-upi">
+          <strong>Unlock Swiggy UPI</strong> <span class="new-tag">NEW</span>
+          <p>Activate fastest UPI in 10 seconds</p>
+        </label>
+      </div>
+
+      <div class="payment-method">
+        <input type="radio" name="payment" id="paytm" value="Paytm UPI" />
+        <label for="paytm">
+          <strong>Paytm UPI</strong>
+          <p>Assured ₹10 - ₹100 Cashback using Paytm UPI on transactions above ₹150</p>
+        </label>
+      </div>
+
+      <div class="payment-method">
+        <input type="radio" name="payment" id="gpay" value="Google Pay" />
+        <label for="gpay"><strong>Google Pay</strong></label>
+      </div>
+
+      <div class="payment-method">
+        <input type="radio" name="payment" id="amazon-pay" value="Amazon Pay" />
+        <label for="amazon-pay">
+          <strong>Amazon Pay UPI</strong>
+          <p>Additional ₹10 off applicable</p>
+        </label>
+      </div>
+
+      <div class="add-upi">
+        <button onclick="showUPI()">+ Add New UPI ID</button>
+        <input type="text" class="hidden" id="upiInput" placeholder="Enter your UPI ID" />
+        <p>You need to have a registered UPI ID</p>
+      </div>
+    </div>
+
+    <div class="payment-section">
+      <h3>💳 Credit & Debit Cards</h3>
+      <div class="add-card">
+        <button onclick="showCard()">+ Add New Card</button>
+        <input type="text" class="hidden" id="cardInput" placeholder="Enter card number" />
+        <p>Save and Pay via Cards.</p>
+      </div>
+    </div>
+
+    <div class="more-payment-options">
+      <h3>More Payment Options</h3>
+
+      <div class="payment-option">
+        <img src="https://img.icons8.com/ios/50/000000/wallet--v1.png" alt="Wallet" />
+        <div>
+          <strong>Wallets</strong>
+          <p>PhonePe, Amazon Pay & more</p>
+        </div>
+      </div>
+
+      <div class="payment-option">
+        <img src="https://img.icons8.com/ios/50/000000/gift-card.png" alt="Pluxee" />
+        <div>
+          <strong>Pluxee</strong>
+          <p>Pluxee card valid only on Food & Instamart</p>
+        </div>
+      </div>
+
+      <div class="payment-option">
+        <img src="https://img.icons8.com/ios/50/000000/bank.png" alt="Netbanking" />
+        <div>
+          <strong>Netbanking</strong>
+          <p>Select from a list of banks</p>
+        </div>
+      </div>
+
+      <div class="payment-option">
+        <img src="https://img.icons8.com/ios/50/000000/money.png" alt="Pay Later" />
+        <div>
+          <strong>Pay Later</strong>
+          <p>Simpl</p>
+        </div>
+      </div>
+
+      <div class="payment-option">
+        <img src="https://img.icons8.com/ios/50/000000/money-bag.png" alt="Pay on Delivery" />
+        <div>
+          <strong>Pay on Delivery</strong>
+          <p>Pay in cash or pay online.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="proceed-pay" onclick="submitPayment()">Proceed to Pay</button>
+    <div id="paymentResult" class="success-msg hidden">Payment Successful!</div>
+
+    <div class="order-timer">
+      <p>⚠️ Outlet will stop taking orders in <span id="timer">10m 0s</span></p>
+    </div>
+  </div>
+
+  <script>
+    function showUPI() {
+      document.getElementById("upiInput").classList.toggle("hidden");
+    }
+
+    function showCard() {
+      document.getElementById("cardInput").classList.toggle("hidden");
+    }
+
+    function submitPayment() {
+      const selected = document.querySelector('input[name="payment"]:checked');
+      const result = document.getElementById("paymentResult");
+
+      if (!selected) {
+        alert("Please select a payment method.");
+        return;
+      }
+
+      result.textContent = `✅ Payment via ${selected.value} was successful!`;
+      result.classList.remove("hidden");
+    }
+
+    // Countdown Timer
+    let totalTime = 600;
+    const timerEl = document.getElementById("timer");
+
+    function updateTimer() {
+      const minutes = Math.floor(totalTime / 60);
+      const seconds = totalTime % 60;
+      timerEl.textContent = `${minutes}m ${seconds < 10 ? "0" : ""}${seconds}s`;
+
+      if (totalTime > 0) totalTime--;
+      else clearInterval(countdown);
+    }
+
+    const countdown = setInterval(updateTimer, 1000);
+    updateTimer();
+  </script>
+
+</body>
+</html>

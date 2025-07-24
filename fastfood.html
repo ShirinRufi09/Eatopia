@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food Cart</title>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            background-color: #ffebcd;
+        }
+        nav {
+            width: 100%;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            top: 0%;
+            background-color: #987654;
+            color: #8b4513;
+        }
+        nav ul {
+            display: flex;
+        }
+        ul li {
+            list-style: none;
+        }
+        li a {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #8b4513;
+            margin-inline: 1.5rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+        }
+        .main {
+            display: flex;
+            gap: 45px;
+            justify-content: center;
+            margin-top: 156px;
+        }
+        .main img {
+            width: 600px;
+        }
+        .mainText {
+            margin-top: 33px;
+            color: #8b4513;
+        }
+        .mainText h1 {
+            font-size: 30px;
+        }
+        .mainText p {
+            margin-top: 1.5rem;
+            color: #8b4513;
+        }
+        .mainText button {
+            width: 140px;
+            height: 38px;
+            background-color: rgb(244, 126, 84);
+            color: #8b4513;
+            border: none;
+            margin-top: 1.5rem;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .head {
+            background-color: #8b4513;
+            height: 10px;
+            width: 20px;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            font-size: medium;
+        }
+        .foods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 56px;
+            justify-content: center;
+        }
+        .foods img {
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+        }
+        .card {
+            width: 300px;
+            background-color: #fff;
+            padding: 12px;
+            cursor: pointer;
+        }
+        .card p {
+            padding: 12px;
+        }
+        .card button {
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            background-color: rgb(244, 126, 84);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            justify-content: center;
+        }
+        .head {
+            text-align: center;
+            color: #fff;
+            padding: 88px;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-bottom: 4px solid #8b4513;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            background-color: #8b4513;
+            color: #fff;
+            flex-wrap: wrap;
+            padding: 66px;
+            margin-top: 66px;
+        }
+        .footer .text p {
+            margin-top: 12px;
+        }
+        .cardDetail {
+            width: 600px;
+            position: fixed;
+            left: 50%;
+            right: 50%;
+            transform: translate(-50%, 40%);
+            padding: 22px;
+            background-color: #fff;
+            text-align: center;
+            top: 4%;
+            color: black;
+        }
+        .cardDetail img {
+            width: 300px;
+        }
+        .cardDetail i {
+            position: absolute;
+            background-color: #8b4513;
+            color: #fff;
+            left: 0px;
+            top: -1px;
+            padding: 8px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        #bar {
+            display: none;
+            font-size: 27px;
+        }
+        @media screen and (max-width: 1100px) {
+            .main {
+                display: block;
+                text-align: center;
+            }
+            .main img {
+                margin-top: 1.5rem;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            ul li {
+                display: none;
+            }
+            #bar {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .main img {
+                width: 90%;
+                border-radius: 1.5rem;
+            }
+            .cardDetail {
+                width: 80%;
+            }
+            .cardDetail img {
+                width: 200px;
+            }
+        }
+        @media screen and (max-width: 930px) {
+            .trendFood {
+                width: 90%;
+            }
+            .trends img {
+                width: 160px;
+                height: 200px;
+            }
+        }
+        @media screen and (max-width: 600px) {
+            .main h1 {
+                font-size: 34px;
+            }
+            .mainText {
+                padding: 6px;
+            }
+            .trendFood {
+                width: 90%;
+            }
+            .trendFood .trends {
+                display: flex;
+                gap: 12px;
+            }
+            .trends img {
+                width: 22%;
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">FreshMenu</div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        <div id="bar">&#9776;</div>
+    </nav>
+
+    <!-- Main Section -->
+    <div class="main">
+        <div class="mainText">
+            <h1>The only decision that matters today: ketchup or no ketchup? 🍔🍅</h1>
+        </div>
+    </div>
+
+    <!-- Fast Food Section -->
+    <div id="fastFood">
+        <div class="head">
+            <h1>FAST FOOD CLASSICS</h1>
+        </div>
+        <div class="foods">
+            <div class="card">
+                <img src="https://www.eatthis.com/wp-content/uploads/sites/4/media/images/ext/520765216/classic-beef-burger.jpg?quality=82&strip=1&w=640" alt="Classic Beef Burger">
+                <p>Classic Beef Burger</p>
+                <button class="cart" onclick="addToCart('Classic Beef Burger')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://assets.bonappetit.com/photos/57acae2d1b33404414975121/master/pass/ultimate-veggie-burger.jpg" alt="Veg Burger">
+                <p>Veg Burger</p>
+                <button class="cart" onclick="addToCart('Veg Burger')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://www.chicken.ca/wp-content/uploads/2020/09/Moist-Chicken-Burgers.jpg" alt="Chicken Burger">
+                <p>Chicken Burger</p>
+                <button class="cart" onclick="addToCart('Chicken Burger')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://cdn.loveandlemons.com/wp-content/uploads/2019/09/margherita-pizza.jpg" alt="Margherita Pizza">
+                <p>Margherita Pizza</p>
+                <button class="cart" onclick="addToCart('Margherita Pizza')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://vignette.wikia.nocookie.net/recipes/images/6/6e/Pepperoni_Pizza.jpg/revision/latest?cb=20150421044114" alt="Pepperoni Pizza">
+                <p>Pepperoni Pizza</p>
+                <button class="cart" onclick="addToCart('Pepperoni Pizza')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="http://3.bp.blogspot.com/-HR4jAuUwjM8/UqB52x4xY-I/AAAAAAAACXE/tEx2flKsOBQ/s1600/ZB0307H_grilled-chicken-caesar-wrap_s4x3.jpg" alt="Chicken Wrap">
+                <p>Chicken Wrap</p>
+                <button class="cart" onclick="addToCart('Chicken Wrap')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://images.eatsmarter.com/sites/default/files/styles/max_size/public/vegetarian-wraps-529982.jpg" alt="Veggie Wrap">
+                <p>Veggie Wrap</p>
+                <button class="cart" onclick="addToCart('Veggie Wrap')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://i0.wp.com/aartimadan.com/wp-content/uploads/2021/09/Chilli-Paneer-Roll.jpg?w=800&ssl=1" alt="Paneer Roll">
+                <p>Paneer Roll</p>
+                <button class="cart" onclick="addToCart('Paneer Roll')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://www.tastingtable.com/img/gallery/the-clever-hack-to-get-curly-fries-without-a-spiralizer/l-intro-1649691299.jpg" alt="Curly Fries">
+                <p>Curly Fries</p>
+                <button class="cart" onclick="addToCart('Curly Fries')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://cuban.recipes/wp-content/uploads/2019/08/onion-rings.jpg" alt="Onion Rings">
+                <p>Onion Rings</p>
+                <button class="cart" onclick="addToCart('Onion Rings')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://www.theedgyveg.com/wp-content/uploads/2021/10/DSC00893WEB.jpg" alt="Mozzarella Sticks">
+                <p>Mozzarella Sticks</p>
+                <button class="cart" onclick="addToCart('Mozzarella Sticks')">Add To Cart</button>
+            </div>
+            <div class="card">
+                <img src="https://vistapointe.net/images/hot-dog-1.jpg" alt="Hot Dog">
+                <p>Hot Dog</p>
+                <button class="cart" onclick="addToCart('Hot Dog')">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <div class="text">
+            <p>&copy; 2025 FreshMenu. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        function addToCart(item) {
+            alert(item + ' has been added to your cart!');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,363 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #ffebcd;
+}
+
+/* UPDATED NAV SECTION */
+nav {
+    width: 100%;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0 40px;
+    background-color: #8b4513;
+    color: #faf0e6;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+ul li {
+    list-style: none;
+}
+
+li a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #faf0e6;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.main {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    margin-top: 156px;
+}
+
+.main img {
+    width: 600px;
+}
+
+.mainText {
+    margin-top: 33px;
+    color: #8b4513;
+}
+
+.mainText h1 {
+    font-size: 90px;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: left;
+}
+.mainText p {
+    font-size: 21px;
+    margin-top: 1.5rem;
+    color: #8b4513;
+    font-family: 'Cormorant Garamond', serif;
+    text-align: left;
+}
+
+.mainText button {
+    width: 140px;
+    height: 38px;
+    background-color: rgb(244, 126, 84);
+    color: #8b4513;
+    border: none;
+    margin-top: 1.5rem;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.head {
+    background-color: #8b4513;
+    height: 10px;
+    width: 20 px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-size: medium;
+}
+
+.foods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 56px;
+    justify-content: center;
+}
+
+.foods img {
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    background-color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.card p {
+    padding: 12px;
+}
+
+.card button {
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    background-color: rgb(244, 126, 84);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.head {
+    text-align: center;
+    color: #fff;
+    padding: 88px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.reviews {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 55px;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.reviewCard {
+    width: 300px;
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+.reviews img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.trend-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.trend-item {
+    text-align: center;
+}
+
+.trend-item img {
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.trend-item p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.blogs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.blogCard {
+    width: 300px;
+    min-height: 350px;
+    padding: 12px;
+    margin-top: 1.5rem;
+    margin-inline: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.blogCard img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.blogCard p {
+    padding: 12px;
+    font-size: 1rem;
+    color: #333;
+    flex-grow: 1;
+}
+
+.blogCard a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgb(248, 174, 36);
+    padding: 10px 14px;
+    border-radius: 5px;
+    text-align: center;
+    align-self: center;
+    margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.blogCard a:hover {
+    background-color: rgb(207, 148, 24);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #8b4513;
+    color: #fff;
+    flex-wrap: wrap;
+    padding: 66px;
+    margin-top: 66px;
+}
+
+.footer .text p {
+    margin-top: 12px;
+}
+
+.cardDetail {
+    width: 600px;
+    position: fixed;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 40%);
+    padding: 22px;
+    background-color: #fff;
+    text-align: center;
+    top: 4%;
+    color: black;
+}
+
+.cardDetail img {
+    width: 300px;
+}
+
+.cardDetail i {
+    position: absolute;
+    background-color: #8b4513;
+    color: #fff;
+    left: 0px;
+    top: -1px;
+    padding: 8px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* UPDATED HAMBURGER ICON */
+#bar {
+    display: none;
+    font-size: 27px;
+    cursor: pointer;
+    color: #8b4513;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1100px) {
+    .main {
+        display: block;
+        text-align: center;
+    }
+
+    .main img {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    ul li {
+        display: none;
+    }
+
+    #bar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .main img {
+        width: 90%;
+        border-radius: 1.5rem;
+    }
+
+    .cardDetail {
+        width: 80%;
+    }
+
+    .cardDetail img {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .trendFood {
+        width: 90%;
+    }
+
+    .trends img {
+        width: 160px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main h1 {
+        font-size: 34px;
+    }
+
+    .mainText {
+        padding: 6px;
+    }
+
+    .trendFood {
+        width: 90%;
+    }
+
+    .trendFood .trends {
+        display: flex;
+        gap: 12px;
+    }
+
+    .trends img {
+        width: 22%;
+        height: 120px;
+    }
+}
